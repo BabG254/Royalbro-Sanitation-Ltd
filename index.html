@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royalbro Sanitation Ltd | Luxury Portable Toilet Rentals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royalblue: '#13274F',
+                        gold: '#D4AF37',
+                        lightgold: '#F0E6C2',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .marble-bg {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0id2hpdGUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48cmVjdCBmaWxsPSJ1cmwoI3BhdHRlcm4pIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PC9zdmc+');
+        }
+        .velvet-bg {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wMikiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGZpbGw9IiMxMzI3NGYiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48cmVjdCBmaWxsPSJ1cmwoI3BhdHRlcm4pIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+PC9zdmc+');
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(19,39,79,0.9) 0%, rgba(19,39,79,0.7) 100%);
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #D4AF37;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .testimonial-card {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .package-card {
+            transition: all 0.3s ease;
+            border: 1px solid #F0E6C2;
+        }
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 1px solid #D4AF37;
+        }
+        .premium-package {
+            border: 2px solid #D4AF37;
+            position: relative;
+            overflow: hidden;
+        }
+        .premium-package::after {
+            content: "POPULAR";
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: #D4AF37;
+            color: #13274F;
+            padding: 5px 30px;
+            font-size: 12px;
+            font-weight: 600;
+            transform: rotate(45deg);
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        .gallery-item img {
+            transition: all 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .floating-btn {
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-nav::after {
+            width: 100%;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-body scroll-smooth">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254700000000" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl z-50 floating-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Sticky Book Now Button -->
+    <div class="fixed bottom-0 left-0 right-0 bg-royalblue text-white py-3 px-6 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4 z-40 shadow-lg">
+        <div class="flex items-center">
+            <span class="font-semibold mr-2">Limited availability for peak dates:</span>
+            <span class="font-bold text-gold animate-pulse">Only 3 units left this weekend</span>
+        </div>
+        <a href="#book-now" class="bg-gold hover:bg-lightgold text-royalblue font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-md flex items-center">
+            <i class="fas fa-calendar-check mr-2"></i> Secure Your Booking
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-30">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="logo-icon">
+                        <i class="fas fa-crown text-white text-xl"></i>
+                    </div>
+                    <a href="#" class="logo text-2xl font-bold text-royalblue">Royalbro<span class="text-gold">Sanitation</span></a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-royalblue focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-royalblue font-medium active-nav">Home</a>
+                    <a href="#services" class="nav-link text-royalblue font-medium">Services</a>
+                    <a href="#gallery" class="nav-link text-royalblue font-medium">Gallery</a>
+                    <a href="#about" class="nav-link text-royalblue font-medium">About</a>
+                    <a href="#contact" class="nav-link text-royalblue font-medium">Contact</a>
+                    <a href="#book-now" class="bg-gold hover:bg-lightgold text-royalblue font-bold py-2 px-6 rounded-full transition duration-300">Book Now</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-royalblue font-medium">Home</a>
+                <a href="#services" class="block py-2 text-royalblue font-medium">Services</a>
+                <a href="#gallery" class="block py-2 text-royalblue font-medium">Gallery</a>
+                <a href="#about" class="block py-2 text-royalblue font-medium">About</a>
+                <a href="#contact" class="block py-2 text-royalblue font-medium">Contact</a>
+                <a href="#book-now" class="block mt-2 bg-gold text-royalblue font-bold py-2 px-6 rounded-full text-center">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-royalblue text-white overflow-hidden">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="absolute inset-0 marble-bg opacity-10"></div>
+        <!-- Video Background Option -->
+        <div class="absolute inset-0 overflow-hidden">
+            <video autoplay muted loop class="w-full h-full object-cover">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-toilet-brush-cleaning-a-toilet-bowl-15639-large.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-royalblue opacity-70"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="mb-8">
+                <div class="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2">
+                    <span class="text-gold font-bold mr-2">VIP</span>
+                    <span class="text-white">Luxury Sanitation Solutions</span>
+                </div>
+            </div>
+            <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span class="text-gold">Royal</span> Restroom <br>Experiences
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
+                Elevate your event with our premium portable sanitation solutions. Where luxury meets necessity for weddings, corporate galas, and exclusive gatherings.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#book-now" class="bg-gold hover:bg-lightgold text-royalblue font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-crown mr-2"></i> Book VIP Toilets
+                </a>
+                <a href="#services" class="bg-transparent hover:bg-white hover:text-royalblue border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-sparkles mr-2"></i> Explore Luxury
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#services" class="text-white animate-bounce">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center text-royalblue mb-12">
+                What Our <span class="text-gold">Clients</span> Say
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-xl p-8 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-gold text-royalblue px-3 py-1 text-xs font-bold rounded-bl-lg">
+                        VERIFIED
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-gold text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="text-royalblue opacity-30 text-4xl">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-lg italic">
+                        "Royalbro transformed our wedding! Guests were shocked these were portable toilets - they rivaled luxury hotel bathrooms. The gold-accented units became a talking point!"
+                    </p>
+                    <div class="flex items-center border-t border-gray-100 pt-4">
+                        <div class="w-14 h-14 rounded-full bg-gray-200 overflow-hidden mr-4 border-2 border-gold">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah M." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-royalblue">Sarah M.</h4>
+                            <p class="text-sm text-gray-500">Wedding Client | Nairobi</p>
+                            <div class="flex mt-1">
+                                <i class="fab fa-instagram text-gold mr-2"></i>
+                                <i class="fab fa-facebook text-gold"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "As an event planner, I rely on Royalbro for all my high-end events. Their VIP toilets consistently impress my clients and their attention to detail is unmatched."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-royalblue">James K.</h4>
+                            <p class="text-sm text-gray-500">Event Planner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Our construction crew morale improved significantly after switching to Royalbro's premium units. Clean, spacious, and well-maintained - worth every penny."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="David T." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-royalblue">David T.</h4>
+                            <p class="text-sm text-gray-500">Construction Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 velvet-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
+                Why Choose <span class="text-gold">Royalbro</span>
+            </h2>
+            <p class="text-center text-lg max-w-2xl mx-auto mb-12">
+                We redefine portable sanitation with premium features and royal service standards
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-20">
+                    <div class="text-gold text-4xl mb-4">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hospital-Grade Hygiene</h3>
+                    <p class="text-white text-opacity-90">
+                        Our units undergo rigorous cleaning and disinfection after every use, meeting the highest sanitation standards.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-20">
+                    <div class="text-gold text-4xl mb-4">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Luxury Comfort</h3>
+                    <p class="text-white text-opacity-90">
+                        Spacious interiors with premium finishes, proper ventilation, and elegant decor for a comfortable experience.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-20">
+                    <div class="text-gold text-4xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Punctual Service</h3>
+                    <p class="text-white text-opacity-90">
+                        We deliver and install units precisely when promised, with 24/7 support for any needs during your rental period.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-20">
+                    <div class="text-gold text-4xl mb-4">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Flexible Packages</h3>
+                    <p class="text-white text-opacity-90">
+                        Customizable solutions for every budget and event type, from basic needs to full VIP treatment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect For Your Event Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center text-royalblue mb-12">
+                Perfect For Your <span class="text-gold">Next Event</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Event 1 -->
+                <div class="relative rounded-xl overflow-hidden h-64 group">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Weddings" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Weddings</h3>
+                        <p class="text-sm">Elegant solutions that complement your special day</p>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="relative rounded-xl overflow-hidden h-64 group">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Corporate Events" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Corporate Events</h3>
+                        <p class="text-sm">Professional facilities that impress clients and staff</p>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="relative rounded-xl overflow-hidden h-64 group">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Construction Sites" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Construction Sites</h3>
+                        <p class="text-sm">Durable yet comfortable units for worker welfare</p>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="relative rounded-xl overflow-hidden h-64 group">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Outdoor Festivals" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Outdoor Festivals</h3>
+                        <p class="text-sm">High-capacity luxury for multi-day events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 marble-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center text-royalblue mb-4">
+                Our <span class="text-gold">VIP Services</span>
+            </h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Premium portable toilet solutions tailored to your specific needs
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <!-- Service 1 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0 w-16 h-16 bg-gold rounded-full flex items-center justify-center text-royalblue text-2xl">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-royalblue mb-3">Wedding Toilets</h3>
+                        <p class="text-gray-600">
+                            Elegantly designed units that blend seamlessly with your wedding decor. Features include full-length mirrors, floral arrangements, premium hand soaps and lotions, and ambient lighting. Available in white, ivory, or custom colors to match your theme.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0 w-16 h-16 bg-gold rounded-full flex items-center justify-center text-royalblue text-2xl">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-royalblue mb-3">Corporate Event Toilets</h3>
+                        <p class="text-gray-600">
+                            Professional-grade facilities with branding options for your company. Includes touchless fixtures, air conditioning, marble countertops, and premium amenities. Ideal for product launches, galas, and executive outdoor meetings.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0 w-16 h-16 bg-gold rounded-full flex items-center justify-center text-royalblue text-2xl">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-royalblue mb-3">Construction Site Toilets</h3>
+                        <p class="text-gray-600">
+                            Durable yet comfortable units designed for worker welfare. Features include solar-powered lighting, wheelchair accessibility, handwashing stations, and regular maintenance schedules. Available with weekly or monthly service contracts.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0 w-16 h-16 bg-gold rounded-full flex items-center justify-center text-royalblue text-2xl">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-royalblue mb-3">Festival & Event Toilets</h3>
+                        <p class="text-gray-600">
+                            High-capacity luxury solutions for multi-day events. Includes trailer-mounted units with multiple stalls, attendant service, baby changing stations, and ADA-compliant options. Custom configurations available for large crowds.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="font-heading text-2xl font-bold text-center text-royalblue mb-8">
+                Premium <span class="text-gold">Features</span> Included
+            </h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                    <div class="text-gold text-2xl mb-2">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <p class="text-sm font-medium">Running Water</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                    <div class="text-gold text-2xl mb-2">
+                        <i class="fas fa-toilet"></i>
+                    </div>
+                    <p class="text-sm font-medium">Flushing System</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                    <div class="text-gold text-2xl mb-2">
+                        <i class="fas fa-mirror"></i>
+                    </div>
+                    <p class="text-sm font-medium">Full-Length Mirror</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                    <div class="text-gold text-2xl mb-2">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <p class="text-sm font-medium">LED Lighting</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                    <div class="text-gold text-2xl mb-2">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <p class="text-sm font-medium">Ventilation</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                    <div class="text-gold text-2xl mb-2">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <p class="text-sm font-medium">Air Freshener</p>
+                </div>
+            </div>
+            
+            <h3 class="font-heading text-2xl font-bold text-center text-royalblue mb-8">
+                Our <span class="text-gold">Packages</span>
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="package-card bg-white rounded-xl p-8 text-center">
+                    <h4 class="font-heading text-2xl font-bold text-royalblue mb-4">Basic</h4>
+                    <div class="text-4xl font-bold text-gold mb-6">KSh 12,500<span class="text-lg font-normal">/day</span></div>
+                    <ul class="space-y-3 mb-8 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Standard VIP Unit
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Daily Cleaning
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Hand Sanitizer
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Basic Lighting
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-gray-300 mr-2"></i> Attendant Service
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-gray-300 mr-2"></i> Premium Fragrance
+                        </li>
+                    </ul>
+                    <a href="#book-now" class="block bg-gray-100 hover:bg-gold hover:text-royalblue text-gray-700 font-bold py-3 px-6 rounded-full transition duration-300">Select Package</a>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="premium-package bg-white rounded-xl p-8 text-center">
+                    <h4 class="font-heading text-2xl font-bold text-royalblue mb-4">Premium</h4>
+                    <div class="text-4xl font-bold text-gold mb-6">KSh 25,000<span class="text-lg font-normal">/day</span></div>
+                    <ul class="space-y-3 mb-8 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Deluxe VIP Unit
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Twice Daily Cleaning
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Handwashing Station
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> LED Lighting
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Attendant Service (8hrs)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Premium Fragrance
+                        </li>
+                    </ul>
+                    <a href="#book-now" class="block bg-gold hover:bg-lightgold text-royalblue font-bold py-3 px-6 rounded-full transition duration-300">Select Package</a>
+                </div>
+                
+                <!-- Royal Suite -->
+                <div class="package-card bg-white rounded-xl p-8 text-center">
+                    <h4 class="font-heading text-2xl font-bold text-royalblue mb-4">Royal Suite</h4>
+                    <div class="text-4xl font-bold text-gold mb-6">KSh 45,000<span class="text-lg font-normal">/day</span></div>
+                    <ul class="space-y-3 mb-8 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Luxury Trailer Unit
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Continuous Cleaning
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Full Vanity Station
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Climate Control
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> 24/7 Attendant Service
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-gold mr-2"></i> Signature Fragrance
+                        </li>
+                    </ul>
+                    <a href="#book-now" class="block bg-gray-100 hover:bg-gold hover:text-royalblue text-gray-700 font-bold py-3 px-6 rounded-full transition duration-300">Select Package</a>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gold bg-opacity-10 rounded-xl p-8 border border-gold border-opacity-30">
+                <h4 class="font-heading text-xl font-bold text-royalblue mb-4 text-center">Optional Add-ons</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-user-tie text-gold mr-3 text-xl"></i>
+                        <div>
+                            <h5 class="font-bold">Attendant Service</h5>
+                            <p class="text-sm text-gray-600">KSh 6,500/hour</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-hand-holding-water text-gold mr-3 text-xl"></i>
+                        <div>
+                            <h5 class="font-bold">Handwashing Stations</h5>
+                            <p class="text-sm text-gray-600">KSh 9,800/day</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-solar-panel text-gold mr-3 text-xl"></i>
+                        <div>
+                            <h5 class="font-bold">Solar Lighting</h5>
+                            <p class="text-sm text-gray-600">KSh 3,900/day</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center text-royalblue mb-4">
+                Our <span class="text-gold">Gallery</span>
+            </h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Explore our luxury portable toilet installations for various events
+            </p>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button type="button" class="gallery-filter px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-300 bg-white text-royalblue hover:bg-gray-50" data-filter="all">
+                        All
+                    </button>
+                    <button type="button" class="gallery-filter px-4 py-2 text-sm font-medium border-t border-b border-gray-300 bg-white text-royalblue hover:bg-gray-50" data-filter="weddings">
+                        Weddings
+                    </button>
+                    <button type="button" class="gallery-filter px-4 py-2 text-sm font-medium border border-gray-300 bg-white text-royalblue hover:bg-gray-50" data-filter="corporate">
+                        Corporate
+                    </button>
+                    <button type="button" class="gallery-filter px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-300 bg-white text-royalblue hover:bg-gray-50" data-filter="events">
+                        Events
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gallery-container">
+                <!-- Wedding 1 -->
+                <div class="gallery-item weddings rounded-xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Wedding Toilet Setup" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-0 group-hover:opacity-90 transition duration-300 flex items-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h3 class="text-white font-bold text-xl mb-2">Elegant Wedding Setup</h3>
+                            <p class="text-white text-opacity-90">White floral arrangements complementing the wedding theme</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wedding 2 -->
+                <div class="gallery-item weddings rounded-xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Wedding Toilet Interior" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-0 group-hover:opacity-90 transition duration-300 flex items-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h3 class="text-white font-bold text-xl mb-2">Luxury Wedding Interior</h3>
+                            <p class="text-white text-opacity-90">Premium finishes with full-length mirror and vanity area</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Corporate 1 -->
+                <div class="gallery-item corporate rounded-xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Corporate Event Setup" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-0 group-hover:opacity-90 transition duration-300 flex items-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h3 class="text-white font-bold text-xl mb-2">Corporate Event Installation</h3>
+                            <p class="text-white text-opacity-90">Professional setup with company branding options</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Corporate 2 -->
+                <div class="gallery-item corporate rounded-xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80" alt="Corporate Toilet Interior" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-0 group-hover:opacity-90 transition duration-300 flex items-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h3 class="text-white font-bold text-xl mb-2">Executive Restroom</h3>
+                            <p class="text-white text-opacity-90">Marble countertops and premium amenities for VIP guests</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Events 1 -->
+                <div class="gallery-item events rounded-xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Festival Setup" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-0 group-hover:opacity-90 transition duration-300 flex items-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h3 class="text-white font-bold text-xl mb-2">Music Festival Installation</h3>
+                            <p class="text-white text-opacity-90">High-capacity trailer units with multiple stalls</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Events 2 -->
+                <div class="gallery-item events rounded-xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Outdoor Event Setup" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalblue to-transparent opacity-0 group-hover:opacity-90 transition duration-300 flex items-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h3 class="text-white font-bold text-xl mb-2">Garden Party Setup</h3>
+                            <p class="text-white text-opacity-90">Discreet placement with elegant exterior design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl text-gold font-bold mb-2">500+</div>
+                    <div class="text-royalblue font-medium">Events Served</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-gold font-bold mb-2">98%</div>
+                    <div class="text-royalblue font-medium">Client Satisfaction</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-gold font-bold mb-2">24/7</div>
+                    <div class="text-royalblue font-medium">Support Available</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-gold font-bold mb-2">5★</div>
+                    <div class="text-royalblue font-medium">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-royalblue mb-6">
+                        About <span class="text-gold">Royalbro</span> Sanitation Ltd
+                    </h2>
+                    <p class="text-gray-600 mb-6">
+                        Founded in 2015, Royalbro Sanitation Ltd is dedicated to elevating the sanitation experience across Kenya and beyond. We transformed the portable toilet industry by bringing dignity, class, and luxury to what was once considered a basic necessity.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Our mission is simple: to provide world-class portable sanitation solutions that exceed expectations. Every unit we deploy reflects our commitment to hygiene excellence, royal treatment, and uncompromising quality standards.
+                    </p>
+                    <div class="bg-gold bg-opacity-10 rounded-lg p-6 mb-6">
+                        <h3 class="font-heading text-xl font-bold text-royalblue mb-3">Our Vision</h3>
+                        <p class="text-gray-600 italic">"To be the most trusted name in high-end sanitation across Africa, setting new standards for luxury, hygiene, and customer service in the portable toilet industry."</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <div class="text-gold text-3xl mb-2">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4 class="font-bold text-royalblue">Excellence</h4>
+                            <p class="text-sm text-gray-600">Uncompromising quality in every service</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-gold text-3xl mb-2">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h4 class="font-bold text-royalblue">Royal Treatment</h4>
+                            <p class="text-sm text-gray-600">Every client receives VIP service</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-gold text-3xl mb-2">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="font-bold text-royalblue">Cleanliness</h4>
+                            <p class="text-sm text-gray-600">Hospital-grade hygiene standards</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="About Royalbro" class="w-full h-96 object-cover">
+                        <div class="absolute inset-0 bg-royalblue bg-opacity-40 flex items-end p-8">
+                            <div class="text-white">
+                                <h3 class="font-heading text-2xl font-bold mb-2">Founder's Message</h3>
+                                <p class="text-white text-opacity-90">"We believe that luxury should be accessible to everyone, especially during life's most important moments. That's why we've dedicated ourselves to redefining portable sanitation."</p>
+                                <p class="mt-3 font-bold">- David Royalbro, CEO & Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Now Section -->
+    <section id="book-now" class="py-16 velvet-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
+                    Book Your <span class="text-gold">VIP Experience</span>
+                </h2>
+                <p class="text-center text-lg mb-12 text-white text-opacity-90">
+                    Reserve your luxury portable toilets now and make your event unforgettable
+                </p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Booking Form -->
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-white font-medium mb-2">Full Name *</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Enter your full name" required>
+                                </div>
+                                <div>
+                                    <label class="block text-white font-medium mb-2">Phone Number *</label>
+                                    <input type="tel" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="+254 700 000 000" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-white font-medium mb-2">Email Address *</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="your.email@example.com" required>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-white font-medium mb-2">Event Type *</label>
+                                    <select class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-gold" required>
+                                        <option value="">Select event type</option>
+                                        <option value="wedding">Wedding</option>
+                                        <option value="corporate">Corporate Event</option>
+                                        <option value="construction">Construction Site</option>
+                                        <option value="festival">Festival/Outdoor Event</option>
+                                        <option value="private">Private Party</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-white font-medium mb-2">Number of Units *</label>
+                                    <input type="number" min="1" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="1" required>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-white font-medium mb-2">Event Date *</label>
+                                    <input type="date" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-gold" required>
+                                </div>
+                                <div>
+                                    <label class="block text-white font-medium mb-2">Duration</label>
+                                    <select class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                        <option value="1">1 Day</option>
+                                        <option value="2">2 Days</option>
+                                        <option value="3">3 Days</option>
+                                        <option value="7">1 Week</option>
+                                        <option value="30">1 Month</option>
+                                        <option value="custom">Custom Duration</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-white font-medium mb-2">Event Location *</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Enter event address or venue" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-white font-medium mb-2">Preferred Package</label>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <label class="flex items-center p-4 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 cursor-pointer hover:bg-opacity-20">
+                                        <input type="radio" name="package" value="basic" class="mr-3">
+                                        <div>
+                                            <div class="font-bold">Basic</div>
+                                            <div class="text-sm text-white text-opacity-70">KSh 12,500/day</div>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 rounded-lg bg-white bg-opacity-10 border border-gold cursor-pointer hover:bg-opacity-20">
+                                        <input type="radio" name="package" value="premium" class="mr-3" checked>
+                                        <div>
+                                            <div class="font-bold text-gold">Premium</div>
+                                            <div class="text-sm text-white text-opacity-70">KSh 25,000/day</div>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 cursor-pointer hover:bg-opacity-20">
+                                        <input type="radio" name="package" value="royal" class="mr-3">
+                                        <div>
+                                            <div class="font-bold">Royal Suite</div>
+                                            <div class="text-sm text-white text-opacity-70">KSh 45,000/day</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-white font-medium mb-2">Add-ons (Optional)</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-3 rounded border-white bg-transparent">
+                                        <span>Attendant Service (+KSh 6,500/hour)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-3 rounded border-white bg-transparent">
+                                        <span>Handwashing Stations (+KSh 9,800/day)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-3 rounded border-white bg-transparent">
+                                        <span>Solar Lighting (+KSh 3,900/day)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-white font-medium mb-2">Special Requirements</label>
+                                <textarea class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-gold" rows="3" placeholder="Any special requests or requirements for your event..."></textarea>
+                            </div>
+                            
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button type="submit" class="flex-1 bg-gold hover:bg-lightgold text-royalblue font-bold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                                    <i class="fas fa-calendar-check mr-2"></i> Submit Booking Request
+                                </button>
+                                <a href="https://wa.me/254700000000" class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp Quote
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Booking Info -->
+                    <div class="space-y-8">
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                            <h3 class="font-heading text-xl font-bold mb-4 text-gold">Instant Quote Available</h3>
+                            <p class="text-white text-opacity-90 mb-4">Get an immediate quote via WhatsApp or request a callback from our booking specialists.</p>
+                            <div class="flex items-center text-white text-opacity-90">
+                                <i class="fas fa-clock text-gold mr-3"></i>
+                                <span>Response time: Under 15 minutes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                            <h3 class="font-heading text-xl font-bold mb-4 text-gold">Booking Guarantee</h3>
+                            <ul class="space-y-3 text-white text-opacity-90">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-gold mr-3"></i>
+                                    <span>100% availability confirmation within 2 hours</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-gold mr-3"></i>
+                                    <span>Free cancellation up to 48 hours before event</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-gold mr-3"></i>
+                                    <span>Flexible payment options available</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-gold mr-3"></i>
+                                    <span>24/7 support during your rental period</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                            <h3 class="font-heading text-xl font-bold mb-4 text-gold">Need Help Choosing?</h3>
+                            <p class="text-white text-opacity-90 mb-4">Our sanitation consultants are here to help you select the perfect package for your event.</p>
+                            <a href="tel:+254700000000" class="inline-flex items-center text-gold hover:text-lightgold font-medium">
+                                <i class="fas fa-phone mr-2"></i>
+                                Call +254 700 000 000
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center text-royalblue mb-4">
+                Get In <span class="text-gold">Touch</span>
+            </h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Ready to elevate your event? Contact our team of sanitation specialists today
+            </p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-royalblue text-xl mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-royalblue text-lg mb-2">Our Location</h3>
+                            <p class="text-gray-600">
+                                Royalbro House, Moi Avenue<br>
+                                Nairobi, Kenya<br>
+                                P.O. Box 12345-00100
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-royalblue text-xl mr-4">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-royalblue text-lg mb-2">Phone Numbers</h3>
+                            <p class="text-gray-600">
+                                Main: +254 700 000 000<br>
+                                Emergency: +254 722 000 000<br>
+                                WhatsApp: +254 700 000 000
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-royalblue text-xl mr-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-royalblue text-lg mb-2">Email Addresses</h3>
+                            <p class="text-gray-600">
+                                General: info@royalbro.co.ke<br>
+                                Bookings: bookings@royalbro.co.ke<br>
+                                Support: support@royalbro.co.ke
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-royalblue text-xl mr-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-royalblue text-lg mb-2">Business Hours</h3>
+                            <p class="text-gray-600">
+                                Monday - Friday: 7:00 AM - 7:00 PM<br>
+                                Saturday: 8:00 AM - 5:00 PM<br>
+                                Sunday: 9:00 AM - 4:00 PM<br>
+                                Emergency Service: 24/7
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gold bg-opacity-10 rounded-lg p-6">
+                        <h3 class="font-bold text-royalblue text-lg mb-3">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-royalblue rounded-full flex items-center justify-center text-white hover:bg-gold hover:text-royalblue transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-royalblue rounded-full flex items-center justify-center text-white hover:bg-gold hover:text-royalblue transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-royalblue rounded-full flex items-center justify-center text-white hover:bg-gold hover:text-royalblue transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-royalblue rounded-full flex items-center justify-center text-white hover:bg-gold hover:text-royalblue transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive Map -->
+                <div class="relative">
+                    <div class="bg-gray-200 rounded-xl h-96 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map text-6xl text-gold mb-4"></i>
+                            <h3 class="text-xl font-bold text-royalblue mb-2">Interactive Map</h3>
+                            <p class="text-gray-600">Map integration will be added here</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-white rounded-lg p-3 shadow-md">
+                        <div class="flex items-center text-sm text-royalblue">
+                            <i class="fas fa-location-dot text-gold mr-2"></i>
+                            <span>Royalbro HQ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center text-royalblue mb-12">
+                Frequently Asked <span class="text-gold">Questions</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span class="font-semibold text-royalblue">How far in advance should I book?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">We recommend booking at least 2-4 weeks in advance for optimal availability, especially during peak wedding season (December-February) and holiday periods. However, we often accommodate last-minute requests subject to availability.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span class="font-semibold text-royalblue">What's included in the rental price?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">All packages include delivery, setup, daily cleaning, restocking of supplies (toilet paper, hand soap, sanitizer), and pickup. Premium and Royal Suite packages include additional features like attendant service and luxury amenities.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span class="font-semibold text-royalblue">Do you provide toilets for construction sites?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Yes! We offer durable yet comfortable units specifically designed for construction sites. These include weekly maintenance, are wheelchair accessible, and feature solar-powered lighting. We provide both short-term and long-term contracts.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span class="font-semibold text-royalblue">What makes your toilets "luxury"?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Our VIP units feature spacious interiors, running water, flushing systems, full-length mirrors, LED lighting, climate control, premium hand soaps and lotions, elegant decor, and fresh floral arrangements. They're designed to rival luxury hotel restrooms.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span class="font-semibold text-royalblue">What are your payment terms?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">We require a 50% deposit to secure your booking, with the balance due on delivery. We accept bank transfers, mobile money (M-Pesa), and major credit cards. Payment plans are available for long-term rentals.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                        <span class="font-semibold text-royalblue">Do you offer emergency support?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Absolutely! We provide 24/7 emergency support during your rental period. Our response team can address any issues within 2 hours in Nairobi and surrounding areas. Emergency contact numbers are provided with every booking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center text-royalblue mb-4">
+                Latest <span class="text-gold">Insights</span>
+            </h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Expert tips and industry insights from the luxury sanitation specialists
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="VIP Toilets Changing Events" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-gold text-royalblue px-3 py-1 rounded-full text-xs font-bold">
+                            TRENDING
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-calendar text-gold mr-2"></i>
+                            <span>July 10, 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-royalblue mb-3 hover:text-gold transition duration-300">
+                            Why VIP Toilets are Changing the Event Industry
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover how luxury portable sanitation is revolutionizing event planning and guest experiences across Kenya's premier venues.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-gold hover:text-royalblue font-medium">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Wedding Toilet Ideas" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-calendar text-gold mr-2"></i>
+                            <span>July 5, 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-royalblue mb-3 hover:text-gold transition duration-300">
+                            5 Reasons You Need Royalbro Toilets at Your Wedding
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            From guest comfort to Instagram-worthy moments, learn why luxury portable toilets are essential for modern weddings.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-gold hover:text-royalblue font-medium">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 3 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Behind the Scenes" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-calendar text-gold mr-2"></i>
+                            <span>June 28, 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-royalblue mb-3 hover:text-gold transition duration-300">
+                            Cleanliness is King: Behind the Scenes at Royalbro
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Take an exclusive look at our hospital-grade cleaning processes and the technology that keeps our units pristine.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-gold hover:text-royalblue font-medium">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center bg-gold hover:bg-lightgold text-royalblue font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-blog mr-2"></i>
+                    Visit Our Blog
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Brochure Section -->
+    <section class="py-16 velvet-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">
+                Download Our <span class="text-gold">Digital Brochure</span>
+            </h2>
+            <p class="text-lg mb-8 text-white text-opacity-90 max-w-2xl mx-auto">
+                Get detailed information about all our services, pricing, and package options in our comprehensive digital catalog
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                <a href="#" class="bg-gold hover:bg-lightgold text-royalblue font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <i class="fas fa-download mr-2"></i>
+                    Download PDF Brochure
+                </a>
+                <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 border border-white border-opacity-50 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Email Me a Copy
+                </a>
+            </div>
+            
+            <p class="text-sm text-white text-opacity-70">
+                *Brochure includes pricing guides, package comparisons, and exclusive offers
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-royalblue text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="logo-icon">
+                            <i class="fas fa-crown text-white text-xl"></i>
+                        </div>
+                        <a href="#" class="logo text-2xl font-bold text-white">Royalbro<span class="text-gold">Sanitation</span></a>
+                    </div>
+                    <p class="text-white text-opacity-80 mb-6 max-w-md">
+                        Elevating sanitation standards across Kenya with luxury portable toilet solutions. Where hygiene meets elegance for unforgettable events.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-gold hover:text-royalblue transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-gold hover:text-royalblue transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-gold hover:text-royalblue transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-gold hover:text-royalblue transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-heading text-lg font-bold mb-4 text-gold">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white text-opacity-80 hover:text-gold transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-white text-opacity-80 hover:text-gold transition duration-300">Services</a></li>
+                        <li><a href="#gallery" class="text-white text-opacity-80 hover:text-gold transition duration-300">Gallery</a></li>
+                        <li><a href="#about" class="text-white text-opacity-80 hover:text-gold transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-white text-opacity-80 hover:text-gold transition duration-300">Contact</a></li>
+                        <li><a href="#book-now" class="text-white text-opacity-80 hover:text-gold transition duration-300">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="font-heading text-lg font-bold mb-4 text-gold">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white text-opacity-80 hover:text-gold transition duration-300">Wedding Toilets</a></li>
+                        <li><a href="#" class="text-white text-opacity-80 hover:text-gold transition duration-300">Corporate Events</a></li>
+                        <li><a href="#" class="text-white text-opacity-80 hover:text-gold transition duration-300">Construction Sites</a></li>
+                        <li><a href="#" class="text-white text-opacity-80 hover:text-gold transition duration-300">Festivals & Events</a></li>
+                        <li><a href="#" class="text-white text-opacity-80 hover:text-gold transition duration-300">VIP Packages</a></li>
+                        <li><a href="#" class="text-white text-opacity-80 hover:text-gold transition duration-300">Emergency Rentals</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Newsletter -->
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="font-heading text-lg font-bold text-gold mb-2">Stay Updated</h3>
+                        <p class="text-white text-opacity-80">Subscribe for exclusive offers and sanitation tips</p>
+                    </div>
+                    <div class="flex w-full md:w-auto">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l-full bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-gold flex-1 md:w-64">
+                        <button class="bg-gold hover:bg-lightgold text-royalblue font-bold px-6 py-2 rounded-r-full transition duration-300">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white text-opacity-60 text-sm mb-4 md:mb-0">
+                        © 2025 Royalbro Sanitation Ltd. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-white text-opacity-60 hover:text-gold transition duration-300">Privacy Policy</a>
+                        <a href="#" class="text-white text-opacity-60 hover:text-gold transition duration-300">Terms of Service</a>
+                        <a href="#" class="text-white text-opacity-60 hover:text-gold transition duration-300">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gallery Filter
+        const filterButtons = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('bg-gold', 'text-royalblue'));
+                button.classList.add('bg-gold', 'text-royalblue');
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // FAQ Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active Navigation Highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+
+        // Form Validation and Enhancement
+        const bookingForm = document.querySelector('form');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Add your form submission logic here
+                alert('Thank you for your booking request! We will contact you within 15 minutes.');
+            });
+        }
+
+        // Intersection Observer for Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.testimonial-card, .package-card, .gallery-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
